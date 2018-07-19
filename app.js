@@ -19,8 +19,6 @@ io.on('connection', socket => {
   });
 
   socket.on('download', url => {
-    console.log(socket.id, 'requested download url:', url);
-    socket.emit('info', url);
 
     const video = youtubedl(
       url,
